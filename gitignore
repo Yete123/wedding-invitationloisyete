@@ -1,0 +1,12 @@
+# ignore OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# editor / IDE
+.vscode/
+.idea/
+*.swp
+
+# logs
+*.log

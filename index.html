@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="theme-color" content="#FBFCFE" />
+  <meta name="description" content="The Wedding Of Sica & Abner — Digital Wedding Invitation, 16 Mei 2030" />
+
+  <!-- =====================================================================
+       EASY EDIT AREA (1 of 2) — SEO / BROWSER TAB INFO
+       Change the title below to your names. It's what shows on the browser tab.
+  ====================================================================== -->
+  <title>The Wedding Of Sica & Abner · 16 Mei 2030</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Great+Vibes&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- =====================================================================
+       MUSIC BUTTON (floating)
+  ===================================================================== -->
+  <button id="musicBtn" class="music-btn" aria-label="Toggle background music" title="Play / Pause Music">
+    <svg class="icon-music" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M9 18V5l12-2v13" />
+      <circle cx="6" cy="18" r="3" />
+      <circle cx="18" cy="16" r="3" />
+    </svg>
+  </button>
+
+  <!-- Background audio — replace file in assets/music/song.mp3 -->
+  <audio id="bgAudio" loop preload="none">
+    <source src="assets/music/song.mp3" type="audio/mpeg" />
+  </audio>
+
+  <!-- =====================================================================
+       COVER / OPENING SECTION
+       Full-screen hero. The rest of the page is locked until guest taps "Open Invitation".
+  ====================================================================== -->
+  <section id="cover" class="cover">
+    <div class="cover__bg"></div>
+    <div class="cover__overlay"></div>
+    <div class="cover__content">
+      <p class="cover__eyebrow reveal-up">The Wedding Of</p>
+
+      <!-- EDIT: Groom & Bride names -->
+      <h1 class="cover__names reveal-up">
+        <span class="script">Sica</span>
+        <span class="cover__amp">&amp;</span>
+        <span class="script">Abner</span>
+      </h1>
+
+      <!-- EDIT: Wedding date -->
+      <p class="cover__date reveal-up">Thursday, 16 May 2030</p>
+
+      <p class="cover__guest reveal-up">Dear,</p>
+      <p class="cover__guest-name reveal-up" id="guestName">Guest</p>
+
+      <button id="openInvitation" class="btn btn--primary reveal-up">
+        <span>Open Invitation</span>
+      </button>
+    </div>
+  </section>
+
+  <!-- All page content below is hidden until "Open Invitation" is tapped -->
+  <main id="mainContent" class="main-content" aria-hidden="true">
+
+    <!-- =====================================================================
+         OPENING QUOTE
+    ===================================================================== -->
+    <section class="section section--quote">
+      <div class="container">
+        <p class="quote__arabic reveal-up">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</p>
+        <p class="quote__text reveal-up">
+          "Dan di antara tanda-tanda kekuasaan-Nya diciptakan-Nya untukmu pasangan
+          hidup dari jenismu sendiri, supaya kamu cenderung dan merasa tenteram
+          kepadanya, dan dijadikan-Nya di antaramu rasa kasih dan sayang."
+        </p>
+        <p class="quote__source reveal-up">— Q.S. Ar-Rum: 21</p>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         BRIDE & GROOM SECTION
+         EDIT: names, parents' names, photo paths, Instagram handles
+    ===================================================================== -->
+    <section id="couple" class="section section--couple">
+      <div class="container">
+        <p class="section__eyebrow reveal-up">Bismillahirrahmanirrahim</p>
+        <h2 class="section__title reveal-up">The Bride &amp; Groom</h2>
+        <p class="section__intro reveal-up">
+          Dengan memohon rahmat dan ridho Allah Subhanahu Wa Ta'ala, kami
+          bermaksud menyelenggarakan pernikahan putra-putri kami:
+        </p>
+
+        <div class="couple">
+          <!-- GROOM -->
+          <article class="person reveal-up">
+            <div class="person__photo">
+              <!-- EDIT: replace file at assets/photos/groom.jpg -->
+              <img src="assets/photos/groom.jpg" alt="Photo of Abner" loading="lazy" />
+            </div>
+            <p class="person__role">The Groom</p>
+            <h3 class="person__name script">Abner</h3>
+            <p class="person__child">Son of</p>
+            <p class="person__father">Father: Bapak [Nama Ayah Abner]</p>
+            <p class="person__mother">&amp; Mother: Ibu [Nama Ibu Abner]</p>
+            <a class="person__social" href="#" target="_blank" rel="noopener">@abner_ig</a>
+          </article>
+
+          <div class="couple__amp reveal-up">&amp;</div>
+
+          <!-- BRIDE -->
+          <article class="person reveal-up">
+            <div class="person__photo">
+              <!-- EDIT: replace file at assets/photos/bride.jpg -->
+              <img src="assets/photos/bride.jpg" alt="Photo of Sica" loading="lazy" />
+            </div>
+            <p class="person__role">The Bride</p>
+            <h3 class="person__name script">Sica</h3>
+            <p class="person__child">Daughter of</p>
+            <p class="person__father">Father: Bapak [Nama Ayah Sica]</p>
+            <p class="person__mother">&amp; Mother: Ibu [Nama Ibu Sica]</p>
+            <a class="person__social" href="#" target="_blank" rel="noopener">@sica_ig</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         COUNTDOWN
+         EDIT: countdown target date in js/config.js (WEDDING_DATETIME)
+    ===================================================================== -->
+    <section id="countdown" class="section section--countdown">
+      <div class="container">
+        <p class="section__eyebrow reveal-up">Save The Date</p>
+        <h2 class="section__title reveal-up">Counting The Moments</h2>
+
+        <!-- EDIT: clickable wedding date — opens Google Calendar -->
+        <a id="calendarLink" class="countdown__date reveal-up" href="#" target="_blank" rel="noopener">
+          Thursday, 16 May 2030 · 09:00 WIB
+        </a>
+
+        <div class="countdown__grid reveal-up" id="countdownGrid">
+          <div class="countdown__box">
+            <span class="countdown__num" id="cdDays">00</span>
+            <span class="countdown__label">Days</span>
+          </div>
+          <div class="countdown__box">
+            <span class="countdown__num" id="cdHours">00</span>
+            <span class="countdown__label">Hours</span>
+          </div>
+          <div class="countdown__box">
+            <span class="countdown__num" id="cdMins">00</span>
+            <span class="countdown__label">Minutes</span>
+          </div>
+          <div class="countdown__box">
+            <span class="countdown__num" id="cdSecs">00</span>
+            <span class="countdown__label">Seconds</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         EVENT DETAILS
+         EDIT: dates, times, venue for Akad & Resepsi
+    ===================================================================== -->
+    <section id="event" class="section section--event">
+      <div class="container">
+        <p class="section__eyebrow reveal-up">Celebrate With Us</p>
+        <h2 class="section__title reveal-up">Event Details</h2>
+
+        <div class="events">
+          <!-- AKAD -->
+          <article class="event-card reveal-up">
+            <div class="event-card__icon">
+              <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+              </svg>
+            </div>
+            <h3 class="event-card__title">Akad Nikah</h3>
+            <p class="event-card__date">Thursday, 16 May 2030</p>
+            <p class="event-card__time">09:00 — 11:00 WIB</p>
+            <p class="event-card__place">Masjid Agung Al-Falah</p>
+            <p class="event-card__addr">Jl. Placeholder No. 123, City</p>
+          </article>
+
+          <!-- RESEPSI -->
+          <article class="event-card reveal-up">
+            <div class="event-card__icon">
+              <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 21h18M5 21V7l8-4v18M19 21V11l-6-4M9 9v.01M9 12v.01M9 15v.01M9 18v.01"/>
+              </svg>
+            </div>
+            <h3 class="event-card__title">Resepsi</h3>
+            <p class="event-card__date">Thursday, 16 May 2030</p>
+            <p class="event-card__time">12:00 — 15:00 WIB</p>
+            <p class="event-card__place">Ballroom The Grand Hall</p>
+            <p class="event-card__addr">Jl. Placeholder No. 456, City</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         VENUE / GOOGLE MAPS
+         EDIT: address, maps embed src, and maps link
+    ===================================================================== -->
+    <section id="venue" class="section section--venue">
+      <div class="container">
+        <p class="section__eyebrow reveal-up">Find Us</p>
+        <h2 class="section__title reveal-up">Wedding Venue</h2>
+
+        <div class="venue">
+          <div class="venue__map reveal-up">
+            <!-- EDIT: replace with your venue Google Maps embed -->
+            <iframe
+              src="https://www.google.com/maps?q=Monas+Jakarta&output=embed"
+              width="100%" height="320" style="border:0;"
+              loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+              title="Wedding Venue Map"></iframe>
+          </div>
+
+          <div class="venue__info reveal-up">
+            <p class="venue__name">Ballroom The Grand Hall</p>
+            <p class="venue__address">Jl. Placeholder No. 456, City, Indonesia</p>
+            <!-- EDIT: replace with your venue's actual Google Maps link -->
+            <a id="mapsLink" class="btn btn--outline" href="https://www.google.com/maps/search/?api=1&query=Monas+Jakarta" target="_blank" rel="noopener">
+              Open in Google Maps
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         GALLERY — pre-wedding photos
+         EDIT: replace files in assets/photos/gallery-*.jpg
+    ====================================================================== -->
+    <section id="gallery" class="section section--gallery">
+      <div class="container">
+        <p class="section__eyebrow reveal-up">Our Moments</p>
+        <h2 class="section__title reveal-up">Pre-Wedding Gallery</h2>
+        <p class="section__intro reveal-up">
+          Beberapa cuplikan kebahagiaan kami sebelum hari bahagia tiba.
+        </p>
+
+        <div class="gallery">
+          <figure class="gallery__item gallery__item--tall reveal-up">
+            <img src="assets/photos/gallery-1.jpg" alt="Pre-wedding photo 1" loading="lazy" />
+          </figure>
+          <figure class="gallery__item gallery__item--tall reveal-up">
+            <img src="assets/photos/gallery-2.jpg" alt="Pre-wedding photo 2" loading="lazy" />
+          </figure>
+          <figure class="gallery__item gallery__item--square reveal-up">
+            <img src="assets/photos/gallery-3.jpg" alt="Pre-wedding photo 3" loading="lazy" />
+          </figure>
+          <figure class="gallery__item gallery__item--tall reveal-up">
+            <img src="assets/photos/gallery-4.jpg" alt="Pre-wedding photo 4" loading="lazy" />
+          </figure>
+          <figure class="gallery__item gallery__item--tall reveal-up">
+            <img src="assets/photos/gallery-5.jpg" alt="Pre-wedding photo 5" loading="lazy" />
+          </figure>
+          <figure class="gallery__item gallery__item--square reveal-up">
+            <img src="assets/photos/gallery-6.jpg" alt="Pre-wedding photo 6" loading="lazy" />
+          </figure>
+          <figure class="gallery__item gallery__item--tall reveal-up">
+            <img src="assets/photos/gallery-7.jpg" alt="Pre-wedding photo 7" loading="lazy" />
+          </figure>
+          <figure class="gallery__item gallery__item--wide reveal-up">
+            <img src="assets/photos/gallery-8.jpg" alt="Pre-wedding photo 8" loading="lazy" />
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         RSVP FORM
+         Submits to Google Apps Script web app (configured in js/config.js)
+    ====================================================================== -->
+    <section id="rsvp" class="section section--rsvp">
+      <div class="container container--narrow">
+        <p class="section__eyebrow reveal-up">Kindly RSVP</p>
+        <h2 class="section__title reveal-up">RSVP Confirmation</h2>
+        <p class="section__intro reveal-up">
+          We would be honored to have you celebrate this special day with us.
+          Please confirm your attendance.
+        </p>
+
+        <form id="rsvpForm" class="rsvp-form reveal-up" novalidate>
+          <div class="field">
+            <label for="rsvpName">Full Name</label>
+            <input type="text" id="rsvpName" name="name" placeholder="Your full name" required />
+          </div>
+
+          <div class="field">
+            <label>Will you attend?</label>
+            <div class="radio-row">
+              <label class="radio">
+                <input type="radio" name="attendance" value="Attending" required />
+                <span>Attending</span>
+              </label>
+              <label class="radio">
+                <input type="radio" name="attendance" value="Not Attending" />
+                <span>Not Attending</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="field" id="guestCountField">
+            <label for="rsvpCount">Number of Guests (including you)</label>
+            <select id="rsvpCount" name="guestCount">
+              <option value="1">1 person</option>
+              <option value="2">2 people</option>
+              <option value="3">3 people</option>
+              <option value="4">4 people</option>
+              <option value="5">5 people</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="rsvpMessage">Wishes &amp; Messages</label>
+            <textarea id="rsvpMessage" name="message" rows="4" placeholder="Send your warmest wishes to the bride and groom..."></textarea>
+          </div>
+
+          <button type="submit" class="btn btn--primary btn--block" id="rsvpSubmit">
+            <span class="btn-label">Send RSVP</span>
+          </button>
+          <p class="rsvp-form__status" id="rsvpStatus" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         WEDDING WISHES WALL
+         Auto-refreshes every 15 seconds. Loaded from Google Sheets via Apps Script.
+    ====================================================================== -->
+    <section id="wishes" class="section section--wishes">
+      <div class="container">
+        <p class="section__eyebrow reveal-up">Words of Love</p>
+        <h2 class="section__title reveal-up">Wedding Wishes</h2>
+
+        <div id="wishesList" class="wishes">
+          <!-- Wishes cards injected by JS -->
+          <p class="wishes__empty">Loading wishes…</p>
+        </div>
+
+        <button class="btn btn--ghost" id="loadMoreWishes" style="display:none;">Load more wishes</button>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         GIFT SECTION
+    ===================================================================== -->
+    <section id="gift" class="section section--gift">
+      <div class="container container--narrow">
+        <p class="section__eyebrow reveal-up">A Token Of Love</p>
+        <h2 class="section__title reveal-up">Wanna give us some gifts?</h2>
+        <p class="section__intro reveal-up">
+          Your presence is the greatest gift. But if you wish to send a token of love,
+          we humbly accept:
+        </p>
+
+        <div class="gift-grid">
+          <!-- BANK -->
+          <article class="gift-card reveal-up">
+            <p class="gift-card__title">Bank Transfer</p>
+            <p class="gift-card__bank">Bank BCA</p>
+            <p class="gift-card__number" id="bankNumber">1234567890</p>
+            <p class="gift-card__name">a.n. Abner</p>
+            <button class="btn btn--ghost btn--sm" id="copyBankBtn" data-copy="1234567890">Copy Account Number</button>
+          </article>
+
+          <!-- GIFT DELIVERY -->
+          <article class="gift-card reveal-up">
+            <p class="gift-card__title">Gift Delivery</p>
+            <p class="gift-card__address">
+              Jl. Placeholder No. 78,<br />
+              City, ZIP, Indonesia
+            </p>
+            <p class="gift-card__name">a.n. Abner</p>
+            <button class="btn btn--ghost btn--sm" id="copyAddrBtn">Copy Address</button>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         CLOSING
+    ====================================================================== -->
+    <section class="section section--closing">
+      <div class="container container--narrow">
+        <p class="closing__thanks reveal-up">Terima Kasih</p>
+        <p class="closing__msg reveal-up">
+          Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i
+          berkenan hadir untuk memberikan doa restu kepada kedua mempelai.
+        </p>
+        <p class="closing__quote reveal-up">
+          Wassalamu'alaikum Warahmatullahi Wabarakatuh
+        </p>
+
+        <div class="closing__couple reveal-up">
+          <p class="closing__from">With Love,</p>
+          <p class="closing__names script">Sica &amp; Abner</p>
+        </div>
+
+        <p class="closing__footer reveal-up">
+          Made with <span class="heart">♥</span> · Digital Wedding Invitation
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Scripts -->
+  <script src="js/config.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
